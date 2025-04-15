@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Home</title>
+    <title>Start</title>
   </head>
   <body>
-    <p id="variableDisplay">Variable value: </p>
-    <input type="text" id="inputBox">
-    <button onclick="updateVariable()">Click Me</button>
+    <p id="nameDisplay">Name: </p>
+    <input type="text" id="inputBox" oninput="updateName()">
+    <button>Start!</button>
 
     <script>
         // Define the variable
-        let myVariable = "";
+        let name = "";
 
         // Function to update the variable
-        function updateVariable() {
+        function updateName() {
             const inputBox = document.getElementById("inputBox");
-            myVariable = inputBox.value; // Update the variable with the textbox value
-            document.getElementById("variableDisplay").innerText = `Variable value: ${myVariable}`; // Update the display
+            name = inputBox.value; // Update the variable with the textbox value
+            document.getElementById("nameDisplay").innerText = `Name: ${name}`; // Update the display
+        }
+
+        function start() {
+          window.location.href = `https://cybersteve547.github.io/html-games/game.html?level=start&name=${name}`
         }
     </script>
   </body>
