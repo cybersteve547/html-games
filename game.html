@@ -6,11 +6,6 @@
   <body>
     <p id="nameDisplay">Name: </p>
 
-    <script>
-        const url = new URL(window.location.href);
-        const level = url.searchParams.get("level");
-        const name = url.searchParams.get("name");
-        document.getElementById("nameDisplay").innerText = `Name: ${name}`;
-    </script>
+    <script src="game.js"></script>
   </body>
 </html>
