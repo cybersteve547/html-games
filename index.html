@@ -4,7 +4,16 @@
     <title>Home</title>
   </head>
   <body>
-    <canvas>haha yer browsers trash</canvas>
-    <!-- <script src="script.js"></script> -->
+    <p id="variabledisplay">variable value: </p>
+    <input type="text" id="inputbox" oninput="updatevariable()">
+    <script>
+        let myvariable = "";
+        
+        function updatevariable() {
+            const inputBox = document.getElementById("inputbox");
+            myVariable = inputBox.value;
+            document.getElementById("variabledisplay").innerText = `variable value: ${myvariable}`; // Update the display
+        }
+    </script>
   </body>
 </html>
