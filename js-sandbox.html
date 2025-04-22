@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Start</title>
+  </head>
+  <body>
+    <input type="text" id="inputBox" oninput="updateName()">
+    <button onclick="start()">Run</button>
+
+    <script>
+        // Define the variable
+        let code = "";
+
+        // Function to update the variable
+        function updateName() {
+            const inputBox = document.getElementById("inputBox");
+            code = inputBox.value; // Update the variable with the textbox value
+        }
+
+        function start() {
+          eval(code)
+        }
+    </script>
+  </body>
+</html>
