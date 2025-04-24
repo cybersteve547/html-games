@@ -6,5 +6,4 @@ let levels = []
 const script = document.createElement("script");
 script.src = `mods/${mod}.js`;
 document.getElementById("nameDisplay").innerText = `Name: ${name}`;
-document.getElementById("textDisplay").innerText = levels[level].text;
-
+document.getElementById("textDisplay").innerText = levels[level]?.text || "Level not found.";
