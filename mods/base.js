@@ -6,3 +6,4 @@ levels.start = {
     "house"
   ]
 }
+debug = "hi"
