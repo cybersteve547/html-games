@@ -11,9 +11,9 @@ script.onload = () => {
     document.getElementById("nameDisplay").textContent = `Name: ${name}`;
     document.getElementById("textDisplay").textContent = leveldata.text || "Level not found.";
     let options = []
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < leveldata.options.length; i++) {
         options.push(document.createElement("button"));
-        options[i].textContent = "hi" //leveldata.options[i]
+        options[i].textContent = leveldata.options[i]
         document.body.appendChild(options[i]);
     };
 };
