@@ -4,9 +4,12 @@ const name = url.searchParams.get("name");
 const mod = url.searchParams.get("mod");
 let levels = {};
 const script = document.createElement("script");
-script.src = `mods/${mod}.js`;
+script.src = `mods/base.js`;
 document.body.appendChild(script);
 script.onload = () => {
     document.getElementById("nameDisplay").innerText = `Name: ${name}`;
     document.getElementById("textDisplay").innerText = levels[level].text || "Level not found.";
+};
+script.onerror = () => {
+    document.getElementById("textDisplay").innerText = "Failed to load mod.";
 };
