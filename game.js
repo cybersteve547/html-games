@@ -7,5 +7,7 @@ let debug = "nooo"
 const script = document.createElement("script");
 script.src = `mods/${mod}.js`;
 document.body.appendChild(script);
-document.getElementById("nameDisplay").innerText = `Name: ${name}`;
-document.getElementById("textDisplay").innerText = debug || "well at least js works";
+script.onload = () => {
+    document.getElementById("nameDisplay").innerText = `Name: ${name}`;
+    document.getElementById("textDisplay").innerText = debug || "well at least js works";
+};
