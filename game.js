@@ -10,10 +10,13 @@ script.onload = () => {
     const leveldata = levels[level]
     document.getElementById("nameDisplay").textContent = `Name: ${name}`;
     document.getElementById("textDisplay").textContent = leveldata.text || "Level not found.";
-    let options = []
+    let options = [];
     for (let i = 0; i < leveldata.options.length; i++) {
         options.push(document.createElement("button"));
-        options[i].textContent = leveldata.options[i]
+        options[i].textContent = leveldata.options[i];
+        options[i].onclick = function() {
+            window.location.href = `game.html?mod=%22base%22&level=backrooms&name=${name}`
+        };
         document.body.appendChild(options[i]);
     };
 };
