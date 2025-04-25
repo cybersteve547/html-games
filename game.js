@@ -5,7 +5,7 @@ const mod = url.searchParams.get("mod");
 let levels = {};
 let debug = "nooo"
 const script = document.createElement("script");
-script.src = `mods/${mod}.js`;
+script.src = `mods/base.js`;
 document.body.appendChild(script);
 script.onload = () => {
     document.getElementById("nameDisplay").innerText = `Name: ${name}`;
