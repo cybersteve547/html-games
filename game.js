@@ -13,7 +13,7 @@ script.onload = () => {
     let options = []
     for (let i = 0; i < leveldata.options.length; i++) {
         options.push(document.createElement("button"));
-        options[i].textContent = leveldata.options[i]
+        options[i].textContent = "hi" //leveldata.options[i]
         document.body.appendChild(options[i]);
     };
 };
