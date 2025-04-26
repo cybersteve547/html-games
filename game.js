@@ -14,9 +14,9 @@ script.onload = () => {
     for (let i = 0; i < leveldata.options.length; i++) {
         options.push(document.createElement("button"));
         options[i].textContent = leveldata.options[i];
-        document.body.appendChild(options[i]);
+        document.body.appendChild(options[i].text);
         options[i].onclick = function() {
-            window.location.href = `game.html?mod=%22base%22&level=backrooms&name=${name}`;
+            window.location.href = `game.html?mod=%22base%22&level=${options[i].level}&name=${name}`;
         };
     };
 };
