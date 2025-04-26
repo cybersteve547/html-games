@@ -7,7 +7,7 @@ const script = document.createElement("script");
 script.src = `mods/base.js`;
 document.body.appendChild(script);
 script.onload = () => {
-    const leveldata = levels[level]
+    const leveldata = levels[level] || {text: "barkoorms", options: ["ruun"]};
     document.getElementById("nameDisplay").textContent = `Name: ${name}`;
     document.getElementById("textDisplay").textContent = leveldata.text || "Level not found.";
     let options = [];
