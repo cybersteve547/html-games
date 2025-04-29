@@ -24,6 +24,12 @@ script.onload = () => {
             window.location.href = `game.html?mod=%22base%22&level=${options[i].level}&name=${name}`;
         };
     };
+  let inv = [];
+    for (let i = 0; i < inventory.length; i++) {
+        inv.push(document.createElement("p"));
+        inv[i].textContent = inventory[i];
+        inv.body.appendChild(inv[i]);
+    };
 };
 script.onerror = () => {
     document.getElementById("textDisplay").innerText = "Failed to load mod.";
